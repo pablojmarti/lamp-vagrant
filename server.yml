@@ -1,0 +1,17 @@
+# vim ft: ansible
+
+- name: Configure Ubuntu 16.04 for Ansible
+  hosts: all 
+  gather_facts: false
+  roles:
+    - { role: xenial, tags: ['xenial'] }
+
+- name: Install Apache Server and configure for use
+  hosts: all
+  roles:
+    - { role: apache-server, tags: ['apache'] }
+
+- name: Install Mysql and set it up
+  hosts: all
+  roles:
+    - { role: mysql-server, tags: ['mysql'] }
