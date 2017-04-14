@@ -1,0 +1,6 @@
+- name: update ubuntu
+  become: yes
+  apt: 
+    update_cache: yes
+  tags: 
+    - xenial

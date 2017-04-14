@@ -1,0 +1,8 @@
+- name: update ubuntu
+  become: yes
+  raw: apt-get update
+
+- name: Install python 2.7
+  become: yes
+  raw: apt-get install -qq python2.7
+
